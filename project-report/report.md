@@ -1,17 +1,15 @@
 # Sample Project Report :hand: fa18-523-000 fa18-523-001
 
-| Mark Miller
-| mgm3@indiana.edu
-| Indiana University
-| hid: fa18-523-63
-| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/project-report/report.md)
-| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
+| Mark Miller | mgm3@indiana.edu | Indiana University | hid: fa18-523-63 |
+github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master
+/project-report/report.md) | code: [:cloud:](https://github.com/cloudmesh-
+community/fa18-523-63/tree/master/project-code)
 
----
+
 
 Keywords: TensorFlow, RoboAdvisor, Machine Learning
 
----
+
 
 ## Abstract
 
@@ -62,15 +60,66 @@ market entities, and the inherent high risk of poor decisions.
 
 The goal of this project is to identify ways to implement the gift that Google
 gave to the big-data world in Tensorflow [@fa-523-63-www-tensorflow-wired] in
-making a robo-advisor that will out-pace the rate of inflation, enabling someones
-money to grow faster than inflation. Machine learning methods from Tensorflow
-will be used, specifically the Neural Network, Logistic Regression, and K-means
-libraries [@fa18-523-63-www-tensorflow].
+making a robo-advisor that will out-pace the rate of inflation, enabling
+someones money to grow faster than inflation. Machine learning methods from
+Tensorflow will be used, specifically the Neural Network, Logistic Regression,
+and K-means libraries [@fa18-523-63-www-tensorflow].
 
 
 ## Requirements
 
-## Design 
+## Design
+
+### Topology
+
+This project is built on a CentOS server [@fa18-523-63-www-centos]. On this
+server, Python 3.6 [@fa18-523-63-www-python-36] will be used as the language.
+The Python wrapper for Tensorflow is installed independently [@fa18-523-63-www-
+tensorflow]. The following methods from the Tensorflow library are used:
+tf.contrib.factorization.KMeans, tf.contrib.factorization.KMeansClustering,
+tf.contrib.learn.LinearRegressor, tf.contrib.learn.LogisticRegressor,
+tf.contrib.nn. These methods are used to take the input data from the Google
+Finance tool [@fa18-523-63-www-google-finance] and perform their operations to
+classify whether a given stock is a strong sell, sell, neutral, buy, or strong
+buy. This operation is then run daily to make a decision with such granularity
+whether a given stock is worth the risk.
+
+### Neural Networks
+
+Neural Networks are used with deep learning principles and capabilities. Neural
+networks are second to none when it comes to image classification, deep
+learning, and more [@fa18-523-63-www-nn-dl]. Based loosely on the human neural
+network, a layered network of neurons take input values, perform mathematical
+computations to find trends and relevancy, and output that is typically a
+classification, based on the inputs [@fa18-523-63-www-ann-human].
+
+![Artificial Neural Network Inputs to
+![Outputs](https://github.com/mgm3IU/fa18-523-63/blob/master/project-
+![pictures/ANN.PNG)
+
+In supervised methods, training datasets are required to make neural networks
+function. In unsupervised methods and with careful tuning, artificial neural
+networks can be used as a clustering algorithm, without classification
+assignment [@fa18-523-63-www-unsup-ann].
+
+### Logistic Regression In its simpler forms, logistic regression [@fa18-523-63
+-www-logreg] takes input values and uses those to provide a classification based
+on the variables to the data. It is robust to highly correlated variables,
+concise representation, and high explanatory value with probability estimation
+[@fa18-523-63-emc-big-data]. Logistic regression is a supervised learning model,
+meaning that it depends on training data to provide results accurately and
+efficiently. Tensorflow methods contain the needed utilities to perform logistic
+regression with high efficiency [@fa18-523-63-www-tensorflow].
+
+### K-Means Clustering
+
+K-means is an unsupervised clustering algorithm [@fa18-523-63-www-msu-kmeans].
+It uses a distance algorithm, typically Euclidean, to determine clusters based
+on numerical data. The goal is to maximize the distance between clusters while
+minimizing the distance between the data points and the centroid of each cluster
+[@fa18-523-63-emc-big-data]. This is an iterative process which tends to
+converge quickly. It is, however, senstive to initilization which is the largest
+downfall of the K-mean algorithm [@fa18-523-63-emc-big-data].
 
 ## Architecture
 
