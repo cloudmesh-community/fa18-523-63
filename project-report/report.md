@@ -100,7 +100,8 @@ function. In unsupervised methods and with careful tuning, artificial neural
 networks can be used as a clustering algorithm, without classification
 assignment [@fa18-523-63-www-unsup-ann].
 
-### Logistic Regression In its simpler forms, logistic regression [@fa18-523-63
+### Logistic Regression 
+In its simpler forms, logistic regression [@fa18-523-63
 -www-logreg] takes input values and uses those to provide a classification based
 on the variables to the data. It is robust to highly correlated variables,
 concise representation, and high explanatory value with probability estimation
