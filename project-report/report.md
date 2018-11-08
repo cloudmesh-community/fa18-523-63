@@ -1,9 +1,11 @@
 # Sample Project Report :hand: fa18-523-000 fa18-523-001
 
-| Mark Miller | mgm3@indiana.edu | Indiana University | hid: fa18-523-63 |
-github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master
-/project-report/report.md) | code: [:cloud:](https://github.com/cloudmesh-
-community/fa18-523-63/tree/master/project-code)
+| Mark Miller 
+| mgm3@indiana.edu 
+| Indiana University 
+| hid: fa18-523-63 
+| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/project-report/report.md) 
+| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
 
 
 
