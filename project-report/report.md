@@ -1,4 +1,4 @@
-# Sample Project Report :hand: fa18-523-000 fa18-523-001
+# Title Missing :hand: fa18-523-63
 
 | Mark Miller 
 | mgm3@indiana.edu 
@@ -95,7 +95,7 @@ network, a layered network of neurons take input values, perform mathematical
 computations to find trends and relevancy, and output that is typically a
 classification, based on the inputs [@fa18-523-63-www-ann-human].
 
-![Artificial Neural Network Inputs to Outputs](https://github.com/mgm3IU/fa18-523-63/blob/master/project-pictures/ANN.PNG)
+![Artificial Neural Network Inputs to Outputs](images/ANN.PNG)
 
 In supervised methods, training datasets are required to make neural networks
 function. In unsupervised methods and with careful tuning, artificial neural
