@@ -105,15 +105,16 @@ function. In unsupervised methods and with careful tuning, artificial neural
 networks can be used as a clustering algorithm, without classification
 assignment [@fa18-523-63-www-unsup-ann].
 
-### Logistic Regression 
-In its simpler forms, logistic regression [@fa18-523-63
--www-logreg] takes input values and uses those to provide a classification based
-on the variables to the data. It is robust to highly correlated variables,
-concise representation, and high explanatory value with probability estimation
-[@fa18-523-63-emc-big-data]. Logistic regression is a supervised learning model,
-meaning that it depends on training data to provide results accurately and
-efficiently. Tensorflow methods contain the needed utilities to perform logistic
-regression with high efficiency [@fa18-523-63-www-tensorflow].
+### Logistic Regression In its simpler forms, logistic regression
+[@fa18-523-63-www-logreg] takes input values and uses those to provide
+a classification based on the variables to the data. It is robust to
+highly correlated variables, concise representation, and high
+explanatory value with probability estimation
+[@fa18-523-63-emc-big-data]. Logistic regression is a supervised
+learning model, meaning that it depends on training data to provide
+results accurately and efficiently. Tensorflow methods contain the
+needed utilities to perform logistic regression with high efficiency
+[@fa18-523-63-www-tensorflow].
 
 ### K-Means Clustering
 
