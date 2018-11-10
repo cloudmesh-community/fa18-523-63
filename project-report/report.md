@@ -95,7 +95,10 @@ network, a layered network of neurons take input values, perform mathematical
 computations to find trends and relevancy, and output that is typically a
 classification, based on the inputs [@fa18-523-63-www-ann-human].
 
-![Artificial Neural Network Inputs to Outputs](images/ANN.PNG)
+![Artificial Neural Network Inputs to Outputs](images/ANN.PNG) {#fig:ann}
+
+:o: you need to mention images such as seen in +@{#fig:ann} .... build
+a sentence that include the refernce to the image
 
 In supervised methods, training datasets are required to make neural networks
 function. In unsupervised methods and with careful tuning, artificial neural
