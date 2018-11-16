@@ -1,4 +1,4 @@
-# Title Missing :hand: fa18-523-63
+# Financial Robo-Advisor Using Tensorflow :hand: fa18-523-63
 
 | Mark Miller 
 | mgm3@indiana.edu 
@@ -69,8 +69,22 @@ and K-means libraries [@fa18-523-63-www-tensorflow].
 
 
 ## Requirements
+This project required Python 3.6 [@fa18-523-63-www-python-36]. 4 GB of
+usable memory (Used for the data stored from the Google Finance API
+[@fa18-523-63-www-google-finance] and two cores of CPU for the
+virtual machine. The Tensorflow library is also required 
+[@fa18-523-63-www-tensorflow]. 8 GB of hard drive space should be allocated.
 
 ## Design
+
+The code design is simple. Firstly, we will query the Google API
+[@fa18-523-63-www-google-finance] for the needed information from companies
+that exist in the S&P 500 [@www-fa18-523-63-sp-500]. Once the data
+is collected and stored locally, methods from the Tensorflow library
+[@fa18-523-63-www-tensorflow] will be used to determind appropriate scores
+to be evaluated using the K-means algorithm [@fa18-523-63-emc-big-data].
+Once these steps have been taken, a cluster will be assigned one of the
+following five (5) categories: strong sell, sell, neutral, buy, strong buy.
 
 ### Topology
 
@@ -95,17 +109,20 @@ network, a layered network of neurons take input values, perform mathematical
 computations to find trends and relevancy, and output that is typically a
 classification, based on the inputs [@fa18-523-63-www-ann-human].
 
-![Artificial Neural Network Inputs to Outputs](images/ANN.PNG) {#fig:ann}
+![Artificial Neural Network Inputs to Outputs](images/ANN.PNG) *Pg 89.ANN
+Layered-network example*
 
-:o: you need to mention images such as seen in +@{#fig:ann} .... build
-a sentence that include the refernce to the image
+[@fa18-523-63-www-nn-dl]
+
+
 
 In supervised methods, training datasets are required to make neural networks
 function. In unsupervised methods and with careful tuning, artificial neural
 networks can be used as a clustering algorithm, without classification
 assignment [@fa18-523-63-www-unsup-ann].
 
-### Logistic Regression In its simpler forms, logistic regression
+### Logistic Regression 
+In its simpler forms, logistic regression
 [@fa18-523-63-www-logreg] takes input values and uses those to provide
 a classification based on the variables to the data. It is robust to
 highly correlated variables, concise representation, and high
@@ -123,18 +140,56 @@ It uses a distance algorithm, typically Euclidean, to determine clusters based
 on numerical data. The goal is to maximize the distance between clusters while
 minimizing the distance between the data points and the centroid of each cluster
 [@fa18-523-63-emc-big-data]. This is an iterative process which tends to
-converge quickly. It is, however, senstive to initilization which is the largest
-downfall of the K-mean algorithm [@fa18-523-63-emc-big-data].
+converge quickly. It is, however, senstive to initilization which is a
+downfall of the K-means algorithms [@fa18-523-63-emc-big-data].
 
 ## Architecture
 
+The architecture is a simple CentOS virtual machine, with 2 cores of CPU
+(one is used for the operating system and another will be dedicated
+to the Python 3.6 code [@fa18-523-63-www-python-36]. Portions of the
+datasets will be saved locally on the virtual hard drive for simpler reading.
+This file will have the ability to be updated daily with the information
+that is presented from the Google Finance API [@fa18-523-63-www-google-finance]
+
 ## Dataset
 
+As previously mentioned, the data sources will come from the Google Finance API
+[@fa18-523-63-www-google-finance]. Data from a Wikipedia API for the companies
+that exist in the S&P 500 [@www-fa18-523-63-wiki-sp-500]. This data comes
+in a .csv file (comma delimmited) forming a table consisting of the following
+metrics for each ticker: Date, Open, High, Low, Close, Volume.
+* Date - The date which the information represents
+* Open - The opening price of stocks for a given ticker
+* High - The highest price of stock in that day for a given ticker
+* Low - The lowest price of stock in that day for a given ticker
+* Close - The closing price of stocks for a given ticker
+
+This data is publicly available and would be categorized as web-scraping
+for the purposes of this project [@www-fa18-523-63-web-scraping].
+The data is used after being stored locally on the virtual hard disk.
+It is piped through the aforementioned machine learning algorithms
+in order to decide whether a given stock is worth buying or whether it
+should be sold.
+
 ## Implementation
+The code implementations are saved in the project code files. Implementing this
+code depends on the Tensorflow [@fa18-523-63-www-tensorflow] libraries and 
+other methods that exist in the Python 3.6 standard libraries 
+[@fa18-523-63-www-python-36]. Once initialized, the virtual machine will
+need to have Python 3.6 installed and the Tensorflow library installed
+through their prescribed installation mediums. A directory will be created
+in which the needed data files, pulled from the Google Finance API
+[@fa18-523-63-www-google-finance]will be stored.
+
 
 ## Benchmark
 
 ## Conclusion
 
+
 ## Acknowledgement
+Some principals for the web-scraping and data usage were adapted from
+pythonprogramming.net [@www-fa18-523-63-python-finance]. The analytics
+are the result of the project.
 
