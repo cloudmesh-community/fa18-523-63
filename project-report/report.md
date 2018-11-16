@@ -47,7 +47,7 @@ via the Internet" [@fa-523-63-www-tensorflow-wired]
 
 Not to be outdone by anyone, Google released an Apache 2 license on their
 artificial intelligence engine [@fa-523-63-www-tensorflow-wired], which means
-that the machine learning methods that were used by Google, were not publicly
+that the machine learning methods that were used by Google, were then publicly
 available. Tensor flow consists of 3144 methods with the intent of machine
 learning, parallel processing, and more. As the impressive Tensorflow library
 continues its development and usage in many industries, one of the largest and
@@ -175,20 +175,49 @@ should be sold.
 ## Implementation
 The code implementations are saved in the project code files. Implementing this
 code depends on the Tensorflow [@fa18-523-63-www-tensorflow] libraries and 
-other methods that exist in the Python 3.6 standard libraries 
+other methods that exist in the Python 3.6 standard library 
 [@fa18-523-63-www-python-36]. Once initialized, the virtual machine will
 need to have Python 3.6 installed and the Tensorflow library installed
 through their prescribed installation mediums. A directory will be created
 in which the needed data files, pulled from the Google Finance API
-[@fa18-523-63-www-google-finance]will be stored.
+[@fa18-523-63-www-google-finance] will be stored.
 
 
 ## Benchmark
+There is no shortage of existing work on financial robo-advisors
+[@fa-523-63-www-robo-advisor-top5]. The goal of this project is not
+to outperform these many tools but to learn about ways that they could
+improve, automate, and undestand ways that machine learning can be
+implemented in the financial district. Because one of the project's
+goals is to improve upon my existing efforts (1.5 percent growth over
+a six-month period), I do not yet have sufficient evidence to claim
+that this current model outperforms my existing model.
+
 
 ## Conclusion
+Due to the developments and growth of machine learning popularity over
+the last decade, Financial robo-advisors are here to stay. Their ease
+of purchase or usage varies, as does their deployment. Using these
+simple methods from Tensorflow [@fa18-523-63-www-tensorflow], I have
+developed my own personal robo-advisor that is able to use comma
+separated values as inputs and make output decisions intelligently.
 
+I have learned a lot about current machine learning models, 
+implementations, case studies, and usage scenarios. From this,
+I conclude that machine learning is the simplest way to make intelligent
+, data driven decisions based on the copious data that exists in the
+finance sector. I also conclude that using artificial neural networks
+[@fa18-523-63-www-nn-dl], along side logistic regression 
+[@fa18-523-63-www-logreg], can yield effective robo-advisors, using the
+simple implementation as is provided by machine learning engines such
+as Tensorflow [@fa18-523-63-www-tensorflow].
 
-## Acknowledgement
+As is mentioned in the Benchmark Section, metrics regarding whether
+this model improves my previously created model will not be available
+for months, due to the nature of the project and the problem it is
+attempting to solve.
+
+## Acknowledgements
 Some principals for the web-scraping and data usage were adapted from
 pythonprogramming.net [@www-fa18-523-63-python-finance]. The analytics
 are the result of the project.
