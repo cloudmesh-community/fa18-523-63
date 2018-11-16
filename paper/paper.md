@@ -1,19 +1,11 @@
 # scikit-learn :hand: :fa18-523-63
 
-:o: format incorrect
-
+| Mark Miller
+| mgm3@iu.edu
+| Indiana University Bloomington
+| hid:fa18-523-63
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/paper/paper.md)
 
-
-* :o: put outhor here so we can idntify you, see example
-* :o: you need to separate this in two deliverables
-
-  a) one for scikit learn in general
-  b) one that focusses on your paper
-
-  They need to be in different directories and files
-
-:o: some of them can not be used in the text you use it.
 
 Scikit-learn is Python's inherent machine learning library. It is a robust library that intends uses object oriented programming to implement commonly used machine learning algorithms effectively, efficiently, pythonically, and swiftly. While, for specific purposes, many experts are able to implement their own algorithms that may improve upon the Scikit-learn library, it has sufficient tools and robustness that enable it to be the leading library for machine learning topics within Python.
 
@@ -23,9 +15,9 @@ As data becomes larger and larger with time, experts in the field are needed to 
 
 ## The supervised algorithms (some of them)
 
-+ Nearest Neighbors: Nearest neighbors is a machine learning algorithm that makes the decision of one input variable based on training data (making it a supervised algorithm) that most similarly matches itself. Once one of the training sets is identified as the closest match of inputs, it will assign the same category for the test instance.
-+ Naive Bayes: Naive Bayes takes a look at Baysian statistics and makes one majorly naive assumption: all of the inputs are independent of eachother. While this is a glaring assumption, due to ease of implementations, most issues that would arise from generally erroneous assumption are not impactful. 
-+ Decision trees: Separating on different attributes of the input data, decision trees are one of the more robust machine learning algorithms in that they are able to handle a wide variety of inputs and still maintain their quality. Splitting on each attributes (usually on traits that maximize the entropy of the model, to enhance effectiveness). A branch off algorithm to decision trees are random forests which use many small, randomly chosen (with replacement) trees that can use small subsets of the data to formulate better opinions in a less computationally intensive way.
++ Nearest Neighbors: Nearest neighbors is a machine learning algorithm that makes the decision of one input variable based on training data (making it a supervised algorithm) that most similarly matches itself. Once one of the training sets is identified as the closest match of inputs, it will assign the same category for the test instance. With careful parameter tuning, some scholars believe this to be a better classification method than random forests [@www-fa18-523-63-knn]
++ Naive Bayes: Naive Bayes takes a look at Baysian statistics and makes one majorly naive assumption: all of the inputs are independent of eachother. While this is a glaring assumption, due to ease of implementations, most issues that would arise from generally erroneous assumption are not impactful [@www-fa18-523-63-naive-bayes]. 
++ Decision trees: Separating on different attributes of the input data, decision trees are one of the more robust machine learning algorithms in that they are able to handle a wide variety of inputs and still maintain their quality [@www-fa18-523-63-decision-trees]. Splitting on each attributes (usually on traits that maximize the entropy of the model, to enhance effectiveness). A branch off algorithm to decision trees are random forests which use many small, randomly chosen (with replacement) trees that can use small subsets of the data to formulate better opinions in a less computationally intensive way.
 + Neural network models (supervised) are algorithms that are particularly good at image classification. They obtain different neurons, each of which contributes in the decision making. They are based off of the way a human neural network would work if it could be modelled accurately via code. Eeach neural network has different levels which contribute to the decision making process.
 
 ## The unsupervised algorithms (some of them)
