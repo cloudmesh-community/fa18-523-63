@@ -1,4 +1,4 @@
-# scikit-learn :hand: :fa18-523-63
+# Scikit-learn :hand: fa18-523-63
 
 | Mark Miller
 | mgm3@iu.edu
