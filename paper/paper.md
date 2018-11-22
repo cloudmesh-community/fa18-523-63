@@ -22,7 +22,7 @@ As data becomes larger and larger with time, experts in the field are needed to 
 
 ## The unsupervised algorithms (some of them)
 
-:o: uf you mention some of them should we not say something like
+:o: if you mention some of them should we not say something like
 
 :o: Skikit learn supports the following unsupervised algorithms: .... From thos we like to draw your attenting to two of tehm that we explain next
 
