@@ -88,7 +88,7 @@ following five (5) categories: strong sell, sell, neutral, buy, strong buy.
 
 ### Topology
 
-This project is built on a CentOS server [@fa18-523-63-www-centos]. On this
+This project is built using Anaconda Python services [@fa18-523-63-www-ana-pyt]. On this
 server, Python 3.6 [@fa18-523-63-www-python-36] will be used as the language.
 The Python wrapper for Tensorflow is installed independently [@fa18-523-63-www-
 tensorflow]. The following methods from the Tensorflow library are used:
@@ -145,9 +145,7 @@ downfall of the K-means algorithms [@fa18-523-63-emc-big-data].
 
 ## Architecture
 
-The architecture is a simple CentOS virtual machine, with 2 cores of CPU
-(one is used for the operating system and another will be dedicated
-to the Python 3.6 code [@fa18-523-63-www-python-36]. Portions of the
+The architecture is a simple usage of Anaconda Python [@fa18-523-63-www-ana-pyt] services. Portions of the
 datasets will be saved locally on the virtual hard drive for simpler reading.
 This file will have the ability to be updated daily with the information
 that is presented from the Google Finance API [@fa18-523-63-www-google-finance]
