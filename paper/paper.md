@@ -6,7 +6,8 @@
 | hid:fa18-523-63
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/paper/paper.md)
 
-:o: keywords missing
+## Keywords
+HID fa18-523-63, Scikit Learn, Machine Learning Methods, Python, Artificial Intelligence
 
 Scikit-learn [@www-fa18-523-63-scikit-learn-developers] is Python's inherent machine learning library. It is a robust library that intends uses object oriented programming to implement commonly used machine learning algorithms effectively, efficiently, pythonically, and swiftly. While, for specific purposes, many experts are able to implement their own algorithms that may improve upon the Scikit-learn library, it has sufficient tools and robustness that enable it to be the leading library for machine learning topics within Python.
 
