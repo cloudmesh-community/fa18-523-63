@@ -69,6 +69,7 @@ and K-means libraries [@fa18-523-63-www-tensorflow].
 
 
 ## Requirements
+
 This project required Python 3.6 [@fa18-523-63-www-python-36]. 4 GB of
 usable memory (Used for the data stored from the Google Finance API
 [@fa18-523-63-www-google-finance] and two cores of CPU for the
@@ -109,10 +110,9 @@ network, a layered network of neurons take input values, perform mathematical
 computations to find trends and relevancy, and output that is typically a
 classification, based on the inputs [@fa18-523-63-www-ann-human].
 
-![Artificial Neural Network Inputs to Outputs](images/ANN.PNG) *Pg 89.ANN
-Layered-network example*
+:o: please see our sample onhow to refer to images in text
 
-[@fa18-523-63-www-nn-dl]
+![Artificial Neural Network Inputs to Outputs*Pg 89.ANN Layered-network example* [@fa18-523-63-www-nn-dl]](images/ANN.PNG) 
 
 
 
@@ -122,6 +122,7 @@ networks can be used as a clustering algorithm, without classification
 assignment [@fa18-523-63-www-unsup-ann].
 
 ### Logistic Regression 
+
 In its simpler forms, logistic regression
 [@fa18-523-63-www-logreg] takes input values and uses those to provide
 a classification based on the variables to the data. It is robust to
@@ -158,6 +159,7 @@ that exist in the S&P 500 [@www-fa18-523-63-wiki-sp-500]. This data comes
 in a .csv file (comma delimmited) forming a table consisting of the following
 metrics for each ticker: Date, Open, High, Low, Close, Volume.
 * Date - The date which the information represents
+
 * Open - The opening price of stocks for a given ticker
 * High - The highest price of stock in that day for a given ticker
 * Low - The lowest price of stock in that day for a given ticker
@@ -171,6 +173,7 @@ in order to decide whether a given stock is worth buying or whether it
 should be sold.
 
 ## Implementation
+
 The code implementations are saved in the project code files. Implementing this
 code depends on the Tensorflow [@fa18-523-63-www-tensorflow] libraries and 
 other methods that exist in the Python 3.6 standard library 
@@ -182,6 +185,7 @@ in which the needed data files, pulled from the Google Finance API
 
 
 ## Benchmark
+
 There is no shortage of existing work on financial robo-advisors
 [@fa-523-63-www-robo-advisor-top5]. The goal of this project is not
 to outperform these many tools but to learn about ways that they could
@@ -193,6 +197,7 @@ that this current model outperforms my existing model.
 
 
 ## Conclusion
+
 Due to the developments and growth of machine learning popularity over
 the last decade, Financial robo-advisors are here to stay. Their ease
 of purchase or usage varies, as does their deployment. Using these
@@ -216,6 +221,7 @@ for months, due to the nature of the project and the problem it is
 attempting to solve.
 
 ## Acknowledgements
+
 Some principals for the web-scraping and data usage were adapted from
 pythonprogramming.net [@www-fa18-523-63-python-finance]. The analytics
 are the result of the project.
