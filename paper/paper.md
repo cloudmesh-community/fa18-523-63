@@ -6,7 +6,7 @@
 | hid:fa18-523-63
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/paper/paper.md)
 
-:o: see our example on how to do keywords
+
 
 Keywords: HID fa18-523-63, Scikit Learn, Machine Learning Methods, Python, Artificial Intelligence
 
