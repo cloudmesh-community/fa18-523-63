@@ -40,7 +40,7 @@ There is a common problem, as defined by *Pointless Programming*
 > minimal floor such that if you drop the light bulb from that floor it breaks.
 > Once you break a bulb, it can’t be reused.
 > Question: What’s the smallest number of drops required in the WORST case to 
-> determine the minimal floor." 
+> determine the minimal floor." [@www-fa18-523-63-two-light-bulbs]
 
 Assuming that no damage is done to the light bulb after prelimary drops, 
 one method to this approach is to start at the bottom floor and increment the
