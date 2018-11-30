@@ -1,5 +1,7 @@
+# This code is written by the project author
+# This is the driver code for the project
+
 import random
-from timeit import default_timer as timer
 from classdef import Testing_List      
         
 def main():
