@@ -134,6 +134,8 @@ end procedure
 ```
 
 ### Merge Sort
+![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG){#fig:mergesort}
+
 The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
 It was originally developed by the popular mathematician and computer scientist
 John von Neumann [@www-fa18-523-63-knuth]. This method segments the data
@@ -191,6 +193,9 @@ function merge(left, right)
 
 
 ### Insertion Sort 
+![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_beginning.JPG){#fig:insertionsortbeg}
+![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_intermediate.JPG){#fig:insertionsortint}
+
 The insertion sort, while far more efficient than the Bubble sort, is\
  inefficient for large lists, because it builds the final sorted list one 
  element at a time [@www-fa18-523-63-insertion-sort]. The Insertion sort remains
@@ -212,6 +217,8 @@ end while
 ```
 
 ### Shell Sort
+![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]](images/Shell_Beginning.JPG){#fig:shellsortbeg}
+![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]](images/Shell_intermediate.JPG){#fig:shellsortint}
 
 The Shell sort is essentially a combination of the Bubble sort and the Insertion
 sort, in that it uses both exchanges and insertions 
@@ -250,6 +257,8 @@ foreach (gap in gaps)
 ```
 
 ### Selection Sort
+![Selection Sort[@www-fa18-523-63-selection-wiki]](images/SelectionSort.JPG){#fig:selectionsortbeg}
+
 
 The Selection sort is not efficient for large data sets because of its time
 complexity and requirements on computational resources 
@@ -348,6 +357,9 @@ size sorting,
 Pseudocode is intentionally not provided here.
 
 ### Heap Sort 
+![Heap Sort[@www-fa18-523-63-heap-wiki]](images/HeapSort.JPG){#fig:heapsort}
+
+
 Heap sort is a method that compares some values to other values by dividing
 the list of numbers into an unsorted and sorted list (like the Selection sort)
 with the goal of shrinking the unsorted list based on comparison of a value to
