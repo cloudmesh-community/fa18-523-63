@@ -1,4 +1,4 @@
-# Financial Robo-Advisor Using Tensorflow :hand: fa18-523-63
+# Analyzing Big Data Sorting Algorithms :hand: fa18-523-63
 
 | Mark Miller 
 | mgm3@indiana.edu 
@@ -9,220 +9,471 @@
 
 
 
-Keywords: TensorFlow, RoboAdvisor, Machine Learning
+Keywords: Sorting Algorithms, Python, Big Data Sorting, Computational Efficiency
 
 
 
 ## Abstract
 
-Machine learning [@fa18-523-63-www-machine-learning-wash] has affected many
-aspects of many industries, with the expectation that this will continue to
-grow. Financial advice [@fa18-523-63-www-fintech-ai] are one such industry that
-has been heavily impacted by artificial intelligence and machine learning
-concepts. This project explores ways that Tensorflow [@fa18-523-63-www-
-tensorflow] methods can be used in a Python 3.6 [@fa18-523-63-www-python-36]
-environment. We will cover many of the algorithms inherent to Tensorflow
-libraries [@fa18-523-63-www-tensorflow] and use cases for them. The storage for
-this project will occur externally, enabling this project to be performed using
-cloud computing [@fa18-523-63-www-machine-learning-cloud]. Data sources are
-pulled from the Google Finance [@fa18-523-63-www-google-finance]. The code is
-used from the aforementioned sources and code as written by the author of this
-paper  [@www-fa18-523-63-project-code]. The goal of any financial advisor is to
-make decisions that beat the rate of inflation. There are large amounts of
-uncertainty with any decision made regarding the New York Stock Exchange
-[@fa18-523-63-www-nyse]. An intelligently built and well-diversified investment
-portfolio can prove to be very lucrative.
-
-
+There are many different sorting algorithms that vary vastly in terms of 
+efficiency, memory usage (depending on the programming language), and time to
+ completion. It is simply not effective to identify a specific data point and
+find it's place in comparison to the rest of the data. There are many methods
+in place to help computational efficiency when needing to get data sorted
+quickly and in a light-weight fashion. The purpose of this project is to provide
+code for many commonly used sorting algorithms while analyzing their efficiency.
+This depends highly on the way that the data stored, the initialization of the
+data, and the computational power inherent to the machine which is performing 
+the operations. We will restrict to identical machine specifics and reset
+memory usage after each algorithm to ensure balanced and stable results. Not all
+popular sorting algorithms are used in this project, but many are. A simple
+timing mechanism, inherent to the programming language in use will be used to
+time each operation that is performed.
 
 ## Introduction
 
-As machine learning has continued its expansion into many industries, different
-groups have made ease of access and use with much haste and care.
+There are many mathematical principles that contribute to efficient computing. 
+There is a common problem, as defined by *Pointless Programming*
+[@www-fa18-523-63-two-light-bulbs], which presents the following scenario:
 
-> "The Google Photos search engine... is enormously impressive - so impressive
-that O'Reilly couldn't understand why Google didn't sell access to its AI engine
-via the Internet" [@fa-523-63-www-tensorflow-wired]
+> "You have two light bulbs and 100 story building. You must determine the
+> minimal floor such that if you drop the light bulb from that floor it breaks.
+> Once you break a bulb, it can’t be reused.
+> Question: What’s the smallest number of drops required in the WORST case to 
+> determine the minimal floor." 
 
+Assuming that no damage is done to the light bulb after prelimary drops, 
+one method to this approach is to start at the bottom floor and increment the
+floor until the light bulb breaks. This way, the answer is obtained with just
+one lightbulb but it takes a long time to climb the stairs and drop the bulb
+from each individual floor, especially if the lightbulb can resist 99 floors of
+drops. 
 
-Not to be outdone by anyone, Google released an Apache 2 license on their
-artificial intelligence engine [@fa-523-63-www-tensorflow-wired], which means
-that the machine learning methods that were used by Google, were then publicly
-available. Tensor flow consists of 3144 methods with the intent of machine
-learning, parallel processing, and more. As the impressive Tensorflow library
-continues its development and usage in many industries, one of the largest and
-most complex industries in the world, the financial sector on Wall Street
-[@fa-523-63-www-wall-street-ml], is taking advantage of this opportunity.
+Another method is to begin from the fiftieth floor. This way you can remove half
+of the floors at once.
 
-Tools that use automation and machine learning to help make investment decisions
-are commonly called robo-advisors [@fa-523-63-www-robo-advisor-invest].
-Successful investing is among the most complicated problems in existence. This
-is due to the seemingly sporadic successes or failures, unpredictability of
-market entities, and the inherent high risk of poor decisions.
+The mathematical answer benefits from the "square root law" 
+[@www-fa18-523-63-square-root]. Finding the square root of the length of the
+ data, 
+(ten, in this case), provides the segmentation required to specify that it can
+take no more than 19 drops in order to determine the number of floors which can
+be endured for the light bulb.
 
-The goal of this project is to identify ways to implement the gift that Google
-gave to the big-data world in Tensorflow [@fa-523-63-www-tensorflow-wired] in
-making a robo-advisor that will out-pace the rate of inflation, enabling
-someones money to grow faster than inflation. Machine learning methods from
-Tensorflow will be used, specifically the Neural Network, Logistic Regression,
-and K-means libraries [@fa18-523-63-www-tensorflow].
+Similar principles can be used in determing optimal methods for sorting big data
+algorithms. While not as simple as the problem described above, there are many
+algorithms that vary in efficiency that will be analyzed in this project. These
+algorithms include the following: Bubble sort [@www-fa18-523-63-bubble-sort], 
+Merge sort [@www-fa18-523-63-merge-sort], Insertion sort 
+[@www-fa18-523-63-insertion-sort], 
+Shell sort[@www-fa18-523-63-bubble-sort], Selection sort 
+[@www-fa18-523-63-insertion-sort], Square Root sort (self-developed), Strand 
+sort [@www-fa18-523-63-strand-sort], Python's sorting algorithm,
+[@www-fa18-523-63-python-sort], and Heap sort [@www-fa18-523-63-heap-sort]. 
+
+Many companies that utilize large datasets, do this through various Structured 
+Query Language (SQL) databases [@www-fa18-523-63-sql]. These can contain far 
+more rows and columns then other, more user-friendly software, like Microsoft 
+Excel, can, by millions of rows and columns [@www-fa18-523-63-mysql-limitations]
+[@www-fa18-523-63-excel-limitations]. This project is related to big data 
+because in most algorithms, time complexity and operational complexity is more
+than most computer resources are able to handle for the tasks that are given to 
+them. Big data often needed to be sorted, which causes problems for many database administrators, programmers, data scientists, and more. 
 
 
 ## Requirements
 
-This project required Python 3.6 [@fa18-523-63-www-python-36]. 4 GB of
-usable memory (Used for the data stored from the Google Finance API
-[@fa18-523-63-www-google-finance] and two cores of CPU for the
-virtual machine. The Tensorflow library is also required 
-[@fa18-523-63-www-tensorflow]. 8 GB of hard drive space should be allocated.
+Due to the random number generation of a ten-million numbers, it is recommended
+that these steps be completed on a compute system with at least 16 GB of RAM.
+ Python 3.6 or higher.
+
+Here is a summary of the hardware and software requirements of this project:
+* 16 GB of RAM (Due to the generation of 10 million random numbers)
+* Intel(R) Core(TM) i5-4690K CPU  @ 3.50GHz (This level of CPU is sufficient)
+* Python 3.6 [@www-fa18-523-63-python-36] or higher (Performed using the Spyder
+ IDE [@www-fa18-523-63-spyder])
+* Package Inclusion:
+  * Python Random [@www-fa18-523-63-python-random]
+  * Python Time [@www-fa18-523-63-python-time]
+  * Python Standard Library [@www-fa18-523-63-python-std]
+  * TBD
 
 ## Design
+Contained in this section is a description of each of the sorting algorithms
+that are used along with `pseudocode` of the algorithms.
 
-The code design is simple. Firstly, we will query the Google API
-[@fa18-523-63-www-google-finance] for the needed information from companies
-that exist in the S&P 500 [@www-fa18-523-63-sp-500]. Once the data
-is collected and stored locally, methods from the Tensorflow library
-[@fa18-523-63-www-tensorflow] will be used to determind appropriate scores
-to be evaluated using the K-means algorithm [@fa18-523-63-emc-big-data].
-Once these steps have been taken, a cluster will be assigned one of the
-following five (5) categories: strong sell, sell, neutral, buy, strong buy.
+### Bubble Sort
 
-### Topology
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubblesort.JPG){#fig:bubblesort}
 
-This project is built using Anaconda Python services [@fa18-523-63-www-ana-pyt]. On this
-server, Python 3.6 [@fa18-523-63-www-python-36] will be used as the language.
-The Python wrapper for Tensorflow is installed independently [@fa18-523-63-www-
-tensorflow]. The following methods from the Tensorflow library are used:
-tf.contrib.factorization.KMeans, tf.contrib.factorization.KMeansClustering,
-tf.contrib.learn.LinearRegressor, tf.contrib.learn.LogisticRegressor,
-tf.contrib.nn. These methods are used to take the input data from the Google
-Finance tool [@fa18-523-63-www-google-finance] and perform their operations to
-classify whether a given stock is a strong sell, sell, neutral, buy, or strong
-buy. This operation is then run daily to make a decision with such granularity
-whether a given stock is worth the risk.
+The Bubble sort algorithm is known to be one of the slower algorithms 
+[@www-fa18-523-63-bubble-sort]. The
+basic process takes two adjacent data points and if they are in the wrong order
+it will simply change the order of the two pairs. This is computationally
+expensive and requires considerable time to compare each individual element to 
+all other elements in the list. At worst case scenario, the amount of operations
+requred are at the order of the number of elements in the list squared 
+[@www-fa18-523-63-intro-to-algorithms]. 
 
-### Neural Networks
+Pseudo-code [@www-fa18-523-63-bubble-wiki]:
 
-Neural Networks are used with deep learning principles and capabilities. Neural
-networks are second to none when it comes to image classification, deep
-learning, and more [@fa18-523-63-www-nn-dl]. Based loosely on the human neural
-network, a layered network of neurons take input values, perform mathematical
-computations to find trends and relevancy, and output that is typically a
-classification, based on the inputs [@fa18-523-63-www-ann-human].
+```
+procedure bubbleSort( A : list of sortable items )
+    n = length(A)
+    repeat
+        swapped = false
+        for i = 1 to n-1 inclusive do
+            /* if this pair is out of order */
+            if A[i-1] > A[i] then
+                /* swap them and remember something changed */
+                swap( A[i-1], A[i] )
+                swapped = true
+            end if
+        end for
+    until not swapped
+end procedure
+```
 
-:o: please see our sample onhow to refer to images in text
+### Merge Sort
+The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
+It was originally developed by the popular mathematician and computer scientist
+John von Neumann [@www-fa18-523-63-knuth]. This method segments the data
+intelligently and sorts in the segmented groups, reducing the computational
+requirements dramatically [@www-fa18-523-63-merge-sort]. 
 
-![Artificial Neural Network Inputs to Outputs*Pg 89.ANN Layered-network example* [@fa18-523-63-www-nn-dl]](images/ANN.PNG) 
+Pseudo-code [@www-fa18-523-63-merge-sort-wiki]:
+
+```
+function merge_sort(list m)
+    // Base case. A list of zero or one elements is sorted, by definition.
+    if length of m ≤ 1 then
+        return m
+
+    // Recursive case. First, divide the list into equal-sized sublists
+    // consisting of the first half and second half of the list.
+    // This assumes lists start at index 0.
+    var left := empty list
+    var right := empty list
+    for each x with index i in m do
+        if i < (length of m)/2 then
+            add x to left
+        else
+            add x to right
+
+    // Recursively sort both sublists.
+    left := merge_sort(left)
+    right := merge_sort(right)
+
+    // Then merge the now-sorted sublists.
+    return merge(left, right)
+In this example, the merge function merges the left and right sublists.
+
+function merge(left, right)
+    var result := empty list
+
+    while left is not empty and right is not empty do
+        if first(left) ≤ first(right) then
+            append first(left) to result
+            left := rest(left)
+        else
+            append first(right) to result
+            right := rest(right)
+
+    // Either left or right may have elements left; consume them.
+    // (Only one of the following loops will actually be entered.)
+    while left is not empty do
+        append first(left) to result
+        left := rest(left)
+    while right is not empty do
+        append first(right) to result
+        right := rest(right)
+    return result
+```
 
 
+### Insertion Sort 
+The insertion sort, while far more efficient than the Bubble sort, is\
+ inefficient for large lists, because it builds the final sorted list one 
+ element at a time [@www-fa18-523-63-insertion-sort]. The Insertion sort remains
+ popular for its simple implementation, efficiency for small data sets, its 
+ light-weight use of memory, and its stability [@www-fa18-523-63-algorithms].
 
-In supervised methods, training datasets are required to make neural networks
-function. In unsupervised methods and with careful tuning, artificial neural
-networks can be used as a clustering algorithm, without classification
-assignment [@fa18-523-63-www-unsup-ann].
+Pseudo-code [@www-fa18-523-63-insersion-sort-wiki]:
 
-### Logistic Regression 
+```
+i ← 1
+while i < length(A)
+    j ← i
+    while j > 0 and A[j-1] > A[j]
+        swap A[j] and A[j-1]
+        j ← j - 1
+    end while
+    i ← i + 1
+end while
+```
 
-In its simpler forms, logistic regression
-[@fa18-523-63-www-logreg] takes input values and uses those to provide
-a classification based on the variables to the data. It is robust to
-highly correlated variables, concise representation, and high
-explanatory value with probability estimation
-[@fa18-523-63-emc-big-data]. Logistic regression is a supervised
-learning model, meaning that it depends on training data to provide
-results accurately and efficiently. Tensorflow methods contain the
-needed utilities to perform logistic regression with high efficiency
-[@fa18-523-63-www-tensorflow].
+### Shell Sort
 
-### K-Means Clustering
+The Shell sort is essentially a combination of the Bubble sort and the Insertion
+sort, in that it uses both exchanges and insertions 
+[@www-fa18-523-63-algorithms]. It uses these two different methods to provide
+lighter operations and order of operations. It begins with large values and
+proceeds to smaller values in order to result in a fully sorted list, after 
+the proper exchanges and computations [@www-fa18-523-63-bubble-sort].
 
-K-means is an unsupervised clustering algorithm [@fa18-523-63-www-msu-kmeans].
-It uses a distance algorithm, typically Euclidean, to determine clusters based
-on numerical data. The goal is to maximize the distance between clusters while
-minimizing the distance between the data points and the centroid of each cluster
-[@fa18-523-63-emc-big-data]. This is an iterative process which tends to
-converge quickly. It is, however, senstive to initilization which is a
-downfall of the K-means algorithms [@fa18-523-63-emc-big-data].
+Pseudo-code [@www-fa18-523-63-shell-sort-wiki]:
+
+```
+# Sort an array a[0...n-1].
+gaps = [701, 301, 132, 57, 23, 10, 4, 1]
+
+# Start with the largest gap and work down to a gap of 1
+foreach (gap in gaps)
+{
+    # Do a gapped insertion sort for this gap size.
+    # The first gap elements a[0..gap-1] are already in gapped order
+    # keep adding one more element until the entire array is gap sorted
+    for (i = gap; i < n; i += 1)
+    {
+        # add a[i] to the elements that have been gap sorted
+        # save a[i] in temp and make a hole at position i
+        temp = a[i]
+        # shift earlier gap-sorted elements up until the correct location for a[
+        i] is found
+        for (j = i; j >= gap and a[j - gap] > temp; j -= gap)
+        {
+            a[j] = a[j - gap]
+        }
+        # put temp (the original a[i]) in its correct location
+        a[j] = temp
+    }
+}
+```
+
+### Selection Sort
+
+The Selection sort is not efficient for large data sets because of its time
+complexity and requirements on computational resources 
+[@www-fa18-523-63-data-structures]. In this algorithm, two different lists are
+generated, a list of points that are already sorted and a list of points that 
+are yet to be sorted. The algorithm will search through the entire list of 
+unsorted points and find the smallest in that list and append it to the list 
+that is sorted, as it will be larger than any other element in that list
+[@www-fa18-523-63-insertion-sort].
+
+Pseudocode [@www-fa18-523-63-selection-wiki]:
+
+```
+bingo(array A)
+
+{ This procedure sorts in ascending order. }
+begin
+    max := length(A)-1;
+
+    { The first iteration is written to look very similar to the subsequent 
+    	ones, but
+      without swaps. }
+    nextValue := A[max];
+    for i := max - 1 downto 0 do
+        if A[i] > nextValue then
+            nextValue := A[i];
+    while (max > 0) and (A[max] = nextValue) do
+        max := max - 1;
+
+    while max > 0 do begin
+        value := nextValue;
+        nextValue := A[max];
+        for i := max - 1 downto 0 do
+             if A[i] = value then begin
+                 swap(A[i], A[max]);
+                 max := max - 1;
+             end else if A[i] > nextValue then
+                 nextValue := A[i];
+        while (max > 0) and (A[max] = nextValue) do
+            max := max - 1;
+    end;
+end;
+```
+
+### Square Root Sort
+
+As was mentioned in the introduction, the process of finding an individual 
+element out of a list of ordered values, is by finding the square root of the 
+size of the list to segment the list into segments of the square root of the 
+total list [@www-fa18-523-63-two-light-bulbs]. While this doesn't make as much 
+sense in this sense, this is a self
+-developed algorithm that segments the list into the nearest integer
+approximation of the square root of the list and sorts those individually. This
+reduces the order of operations, and, thereby, the time complexity of the 
+algorithm. 
+
+Pseudocode (self-developed):
+
+```
+function squareRootSort(listing):
+  TBD
+```
+
+### Strand Sort
+
+Pseudocode [@www-fa18-523-63-strand-wiki]:
+```
+procedure strandSort( A : list of sortable items ) defined as:
+  while length( A ) > 0
+    clear sublist
+    sublist[ 0 ] := A[ 0 ]
+    remove A[ 0 ]
+    for each i in 0 to length( A ) do:
+      if A[ i ] > sublist[ last ] then
+        append A[ i ] to sublist
+        remove A[ i ]
+      end if
+    end for
+    merge sublist into results
+  end while
+  return results
+end procedure
+```
+
+### Python Sort (Timsort)
+
+The Timsort algorithm is the way that Python sorts lists. It is an extremely
+efficient algorithm, utilizing the benefits of many other algorithms. A
+*min* function is utilized heavily to expedite the processes 
+[@www-fa18-523-63-timsort]. It is difficult to identify weaknesses in this
+algorithm but if there are any it is that it can struggle with memory usage, 
+which tends to be less than other algorithms still, and stability. It utilizes
+ adaptive sorting to find optimal sizes for each step of the process.
+size sorting, 
+
+Pseudocode is intentionally not provided here.
+
+### Heap Sort 
+Heap sort is a method that compares some values to other values by dividing
+the list of numbers into an unsorted and sorted list (like the Selection sort)
+with the goal of shrinking the unsorted list based on comparison of a value to
+ the list that is already sorted. It can have high time-complexity, and 
+ struggles with larger data sets, do to the number of comparisons that are
+  required at each step of the algorithm.
+
+Pseudocode [www-fa18-523-63-heap-wiki]:
+
+#### Main Routine:
+```
+procedure heapsort(a, count) is
+    input: an unordered array a of length count
+ 
+    (Build the heap in array a so that largest value is at the root)
+    heapify(a, count)
+
+    (The following loop maintains the invariants that a[0:end] is a heap and 
+    	every element
+     beyond end is greater than everything before it (so a[end:count] is in 
+     	sorted order))
+    end ← count - 1
+    while end > 0 do
+        (a[0] is the root and largest value. The swap moves it in front of the
+         sorted elements.)
+        swap(a[end], a[0])
+        (the heap size is reduced by one)
+        end ← end - 1
+        (the swap ruined the heap property, so restore it)
+        siftDown(a, 0, end)
+```
+#### Sub-routines:
+```
+(Put elements of 'a' in heap order, in-place)
+procedure heapify(a, count) is
+    (start is assigned the index in 'a' of the last parent node)
+    (the last element in a 0-based array is at index count-1; find the parent
+     of that element)
+    start ← iParent(count-1)
+    
+    while start ≥ 0 do
+        (sift down the node at index 'start' to the proper place such that all 
+        nodes below
+         the start index are in heap order)
+        siftDown(a, start, count - 1)
+        (go to the next parent node)
+        start ← start - 1
+    (after sifting down the root all nodes/elements are in heap order)
+
+(Repair the heap whose root element is at index 'start', assuming the heaps 
+rooted at its children are valid)
+procedure siftDown(a, start, end) is
+    root ← start
+
+    while iLeftChild(root) ≤ end do    (While the root has at least one child)
+        child ← iLeftChild(root)   (Left child of root)
+        swap ← root                (Keeps track of child to swap with)
+
+        if a[swap] < a[child]
+            swap ← child
+        (If there is a right child and that child is greater)
+        if child+1 ≤ end and a[swap] < a[child+1]
+            swap ← child + 1
+        if swap = root
+            (The root holds the largest element. Since we assume the heaps
+             rooted at the
+             children are valid, this means that we are done.)
+            return
+        else
+            swap(a[root], a[swap])
+            root ← swap            (repeat to continue sifting down the child 
+            	now)
+```
 
 ## Architecture
+The architecture for this project is a main.py file which is the master python
+file, calling the other functions from other files, stored in the same
+directory. The other files will each be a Python 3.6
+ [@www-fa18-523-63-python-36] implementation, generally performed in a rather
+procedural programming methodology. The following files are called from 
+main.py in the working directory:
+* bubble.py
+* merge.py
+* insertion.py
+* shell.py
+* selection.py
+* squareroot.py
+* strand.py
+* pysort.py
+* heap.py
 
-The architecture is a simple usage of Anaconda Python [@fa18-523-63-www-ana-pyt] services. Portions of the
-datasets will be saved locally on the virtual hard drive for simpler reading.
-This file will have the ability to be updated daily with the information
-that is presented from the Google Finance API [@fa18-523-63-www-google-finance]
+In the call of the each of the above files, in main.py there is a a timing
+mechanism, using Python's *Time* library [@www-fa18-523-63-python-time]. 
 
 ## Dataset
-
-As previously mentioned, the data sources will come from the Google Finance API
-[@fa18-523-63-www-google-finance]. Data from a Wikipedia API for the companies
-that exist in the S&P 500 [@www-fa18-523-63-wiki-sp-500]. This data comes
-in a .csv file (comma delimmited) forming a table consisting of the following
-metrics for each ticker: Date, Open, High, Low, Close, Volume.
-* Date - The date which the information represents
-
-* Open - The opening price of stocks for a given ticker
-* High - The highest price of stock in that day for a given ticker
-* Low - The lowest price of stock in that day for a given ticker
-* Close - The closing price of stocks for a given ticker
-
-This data is publicly available and would be categorized as web-scraping
-for the purposes of this project [@www-fa18-523-63-web-scraping].
-The data is used after being stored locally on the virtual hard disk.
-It is piped through the aforementioned machine learning algorithms
-in order to decide whether a given stock is worth buying or whether it
-should be sold.
+The only dataset required for this project is a list of 100 randomly generated
+numbers, using the Python random library [@www-fa18-523-63-python-random]. 
+Using this library, ten-million Gaussian Random Numbers 
+[@www-fa18-523-63-gauss-rand] will be generated, 
+using the seed of "one". This data will only be stored for the duration of the 
+program's run-time and will not be committed to disk, unless memory is usurped
+, in which case, temporary disk usage will occur. 
 
 ## Implementation
-
-The code implementations are saved in the project code files. Implementing this
-code depends on the Tensorflow [@fa18-523-63-www-tensorflow] libraries and 
-other methods that exist in the Python 3.6 standard library 
-[@fa18-523-63-www-python-36]. Once initialized, the virtual machine will
-need to have Python 3.6 installed and the Tensorflow library installed
-through their prescribed installation mediums. A directory will be created
-in which the needed data files, pulled from the Google Finance API
-[@fa18-523-63-www-google-finance] will be stored.
-
+The implementation is performed using the Spyder terminal and running the 
+Python 3.6 script via Spyder's command line interface (CLI). Provided that all
+of the files are stored in a single directory, the files as listed in the code
+folder for this project should run flawlessly, with the correct Python version
+ and with all of the hardware and software requirements met.
 
 ## Benchmark
+Many different sizes of lists of random numbers were tested. In some cases, smaller lists benefitted from specific algorithms, while others were nearly inoperational for larger data sets. The times for different sizes of lists of random numbers are listed here:
 
-There is no shortage of existing work on financial robo-advisors
-[@fa-523-63-www-robo-advisor-top5]. The goal of this project is not
-to outperform these many tools but to learn about ways that they could
-improve, automate, and undestand ways that machine learning can be
-implemented in the financial district. Because one of the project's
-goals is to improve upon my existing efforts (1.5 percent growth over
-a six-month period), I do not yet have sufficient evidence to claim
-that this current model outperforms my existing model.
+
+**Results will be posted here, when finalized.**
+
 
 
 ## Conclusion
 
-Due to the developments and growth of machine learning popularity over
-the last decade, Financial robo-advisors are here to stay. Their ease
-of purchase or usage varies, as does their deployment. Using these
-simple methods from Tensorflow [@fa18-523-63-www-tensorflow], I have
-developed my own personal robo-advisor that is able to use comma
-separated values as inputs and make output decisions intelligently.
+As data gets larger, certain sorting algorithms become nearly unfunctional, due to time and operational complexity of the algorithm. In this case, the old saying of "the simpler, the better" does not seem to apply. Python's inherent sorting algorithm, *Timsort*, outperforms all of the other algorithms that were tested, with some minor excpetions on smaller datasets. 
 
-I have learned a lot about current machine learning models, 
-implementations, case studies, and usage scenarios. From this,
-I conclude that machine learning is the simplest way to make intelligent
-, data driven decisions based on the copious data that exists in the
-finance sector. I also conclude that using artificial neural networks
-[@fa18-523-63-www-nn-dl], along side logistic regression 
-[@fa18-523-63-www-logreg], can yield effective robo-advisors, using the
-simple implementation as is provided by machine learning engines such
-as Tensorflow [@fa18-523-63-www-tensorflow].
-
-As is mentioned in the Benchmark Section, metrics regarding whether
-this model improves my previously created model will not be available
-for months, due to the nature of the project and the problem it is
-attempting to solve.
+**Will include graphs, and all results, barring completion of code.**
 
 ## Acknowledgements
-
-Some principals for the web-scraping and data usage were adapted from
-pythonprogramming.net [@www-fa18-523-63-python-finance]. The analytics
-are the result of the project.
-
+Plenty of research, all which is cited here in references.bib, was used in this
+analysis of different sorting algorithms. Credit goes to each author of all 
+articles and web pages listed for their brilliance and efforts in furthering
+the world of data science, computer science, and 
