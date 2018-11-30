@@ -472,7 +472,7 @@ folder for this project should run flawlessly, with the correct Python version
  I purposely kept the design very simple, for ease of implementation, and
  ease of programming.
  
- ![Design Doc](images/DesignDoc.JPG){#fig:designdoc}
+ ![Design Doc](images/DesignDoc2.JPG){#fig:designdoc}
 
 ## Benchmark
 Many different sizes of lists of random numbers were tested. In some cases, smaller lists benefitted from specific algorithms, while others were nearly inoperational for larger data sets. The times for different sizes of lists of random numbers are listed here:
