@@ -103,7 +103,7 @@ that are used along with `pseudocode` of the algorithms.
 
 ### Bubble Sort
 
-![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubblesort.JPG){#fig:bubblesort}
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG){#fig:bubblesort}
 
 The Bubble sort algorithm is known to be one of the slower algorithms 
 [@www-fa18-523-63-bubble-sort]. The
