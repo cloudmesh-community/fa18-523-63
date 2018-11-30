@@ -4,8 +4,10 @@
 | mgm3@indiana.edu 
 | Indiana University 
 | hid: fa18-523-63 
-| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/project-report/report.md) 
-| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
+| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63
+/edit/master/project-report/report.md) 
+| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63
+/tree/master/project-code)
 
 
 
@@ -66,7 +68,7 @@ algorithms include the following: Bubble sort [@www-fa18-523-63-bubble-sort],
 Merge sort [@www-fa18-523-63-merge-sort], Insertion sort 
 [@www-fa18-523-63-insertion-sort], 
 Shell sort[@www-fa18-523-63-bubble-sort], Selection sort 
-[@www-fa18-523-63-insertion-sort], Square Root sort (self-developed), Strand 
+[@www-fa18-523-63-insertion-sort], Strand 
 sort [@www-fa18-523-63-strand-sort], Python's sorting algorithm,
 [@www-fa18-523-63-python-sort], and Heap sort [@www-fa18-523-63-heap-sort]. 
 
@@ -77,7 +79,8 @@ Excel, can, by millions of rows and columns [@www-fa18-523-63-mysql-limitations]
 [@www-fa18-523-63-excel-limitations]. This project is related to big data 
 because in most algorithms, time complexity and operational complexity is more
 than most computer resources are able to handle for the tasks that are given to 
-them. Big data often needed to be sorted, which causes problems for many database administrators, programmers, data scientists, and more. 
+them. Big data often needed to be sorted, which causes problems for many
+ database administrators, programmers, data scientists, and more. 
 
 
 ## Requirements
@@ -103,7 +106,8 @@ that are used along with `pseudocode` of the algorithms.
 
 ### Bubble Sort
 
-![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG){#fig:bubblesort}
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]]
+(images/bubble_sort.JPG){#fig:bubblesort}
 
 The Bubble sort algorithm is known to be one of the slower algorithms 
 [@www-fa18-523-63-bubble-sort]. The
@@ -134,7 +138,8 @@ end procedure
 ```
 
 ### Merge Sort
-![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG){#fig:mergesort}
+![Merge Sort[@www-fa18-523-63-merge-sort-wiki]]
+(images/Mergesort.JPG){#fig:mergesort}
 
 The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
 It was originally developed by the popular mathematician and computer scientist
@@ -193,8 +198,10 @@ function merge(left, right)
 
 
 ### Insertion Sort 
-![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_beginning.JPG){#fig:insertionsortbeg}
-![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_intermediate.JPG){#fig:insertionsortint}
+![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]]
+(images/Insertion_beginning.JPG){#fig:insertionsortbeg}
+![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]]
+(images/Insertion_intermediate.JPG){#fig:insertionsortint}
 
 The insertion sort, while far more efficient than the Bubble sort, is\
  inefficient for large lists, because it builds the final sorted list one 
@@ -217,8 +224,10 @@ end while
 ```
 
 ### Shell Sort
-![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]](images/Shell_Beginning.JPG){#fig:shellsortbeg}
-![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]](images/Shell_intermediate.JPG){#fig:shellsortint}
+![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]]
+(images/Shell_Beginning.JPG){#fig:shellsortbeg}
+![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]]
+(images/Shell_intermediate.JPG){#fig:shellsortint}
 
 The Shell sort is essentially a combination of the Bubble sort and the Insertion
 sort, in that it uses both exchanges and insertions 
@@ -257,7 +266,8 @@ foreach (gap in gaps)
 ```
 
 ### Selection Sort
-![Selection Sort[@www-fa18-523-63-selection-wiki]](images/SelectionSort.JPG){#fig:selectionsortbeg}
+![Selection Sort[@www-fa18-523-63-selection-wiki]]
+(images/SelectionSort.JPG){#fig:selectionsortbeg}
 
 
 The Selection sort is not efficient for large data sets because of its time
@@ -301,25 +311,6 @@ begin
             max := max - 1;
     end;
 end;
-```
-
-### Square Root Sort
-
-As was mentioned in the introduction, the process of finding an individual 
-element out of a list of ordered values, is by finding the square root of the 
-size of the list to segment the list into segments of the square root of the 
-total list [@www-fa18-523-63-two-light-bulbs]. While this doesn't make as much 
-sense in this sense, this is a self
--developed algorithm that segments the list into the nearest integer
-approximation of the square root of the list and sorts those individually. This
-reduces the order of operations, and, thereby, the time complexity of the 
-algorithm. 
-
-Pseudocode (self-developed):
-
-```
-function squareRootSort(listing):
-  TBD
 ```
 
 ### Strand Sort
@@ -475,7 +466,10 @@ folder for this project should run flawlessly, with the correct Python version
  ![Design Doc](images/DesignDoc2.JPG){#fig:designdoc}
 
 ## Benchmark
-Many different sizes of lists of random numbers were tested. In some cases, smaller lists benefitted from specific algorithms, while others were nearly inoperational for larger data sets. The times for different sizes of lists of random numbers are listed here:
+Many different sizes of lists of random numbers were tested. In some cases,
+ smaller lists benefitted from specific algorithms, while others were nearly
+  inoperational for larger data sets. The times for different sizes of lists
+   of random numbers are listed here:
 
 
 **Results will be posted here, when finalized.**
@@ -484,7 +478,11 @@ Many different sizes of lists of random numbers were tested. In some cases, smal
 
 ## Conclusion
 
-As data gets larger, certain sorting algorithms become nearly unfunctional, due to time and operational complexity of the algorithm. In this case, the old saying of "the simpler, the better" does not seem to apply. Python's inherent sorting algorithm, *Timsort*, outperforms all of the other algorithms that were tested, with some minor excpetions on smaller datasets. 
+As data gets larger, certain sorting algorithms become nearly unfunctional, due
+ to time and operational complexity of the algorithm. In this case, the old
+  saying of "the simpler, the better" does not seem to apply. Python's inherent
+   sorting algorithm, *Timsort*, outperforms all of the other algorithms that
+    were tested, with some minor excpetions on smaller datasets. 
 
 **Will include graphs, and all results, barring completion of code.**
 
