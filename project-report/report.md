@@ -49,8 +49,8 @@ one lightbulb but it takes a long time to climb the stairs and drop the bulb
 from each individual floor, especially if the lightbulb can resist 99 floors of
 drops. 
 
-Another method is to begin from the fiftieth floor. This way you can remove half
-of the floors at once.
+Another method is to begin from the fiftieth floor. This way, half
+of the floors will be removed at once.
 
 The mathematical answer benefits from the "square root law" 
 [@www-fa18-523-63-square-root]. Finding the square root of the length of the
