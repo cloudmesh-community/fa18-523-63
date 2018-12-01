@@ -471,10 +471,61 @@ Many different sizes of lists of random numbers were tested. In some cases,
   inoperational for larger data sets. The times for different sizes of lists
    of random numbers are listed here:
 
+Here is the list of the results, along with some visualizations to help
+interpret the information that is being presented
 
-**Results will be posted here, when finalized.**
+```
+Python 100 time:  1.114347469410859e-05
+Bubble 100 time:  0.0005601062985078897
+Select 100 time:  0.0003020468502654694
+Merge  100 time:  0.00021025979731348343
+Shell  100 time:  3.313718116260134e-05
+Heap   100 time:  0.000275947659247322
+Strand 100 time:  3.841566649498418e-05
 
+Python 1,000 time:  0.0001316689667874016
+Bubble 1,000 time:  0.07056049045422697
+Select 1,000 time:  0.029865982105548028
+Merge  1,000 time:  0.0027034659433411434
+Shell  1,000 time:  0.0002888506314775441
+Heap   1,000 time:  0.0045884728933742736
+Strand 1,000 time:  0.00035717773062060587
 
+Python 10,000 time:  0.001863013250840595
+Bubble 10,000 time:  7.700457498340256
+Select 10,000 time:  3.177057224973396
+Merge  10,000 time:  0.036345033688121475
+Shell  10,000 time:  0.003031025487871375
+Heap   10,000 time:  0.061194692068966106
+Strand 10,000 time:  0.01295399768059724
+
+Python 100,000 time:  0.026999469511792995
+Bubble 100,000 time:  925.2644678242395
+Select 100,000 time:  528.9866005565309
+Merge  100,000 time:  0.5586767063505249
+Shell  100,000 time:  0.0392740083989338
+Heap   100,000 time:  0.8638226169750851
+Strand 100,000 time:  1.5463215238887642
+```
+
+From this, it is simply determined that for all amounts of randomly generated
+numerical data, the Selection and Bubble methods are extremely inefficient.
+These two methods are the bottom scorers for each of the datasets, which means
+that they do not out perform the other algorithms for either small or large 
+data, at least with these implementations, in this environment.
+
+All of these tests were performed on a single core, to ensure accurate timing 
+for each of the individual algorithms. The memory buffers were never filling,
+and the core of the CPU which was processing this information was pegged at
+100-percent.
+
+To make the visualiztions more aesthetic I have excluded the two slowest
+algorithms (Bubble and Select). 
+
+![Chart By Size](images/ChartByDataSize.JPG){#fig:chartbytest}
+
+![Normalized Percentages]
+(images/NormalizedPercentagesPerTrial.JPG){#fig:chartbymethod}
 
 ## Conclusion
 
