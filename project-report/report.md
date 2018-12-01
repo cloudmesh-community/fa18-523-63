@@ -106,8 +106,8 @@ that are used along with `pseudocode` of the algorithms.
 
 ### Bubble Sort
 
-![Bubble Sort[@www-fa18-523-63-bubble-wiki]]
-(images/bubble_sort.JPG){#fig:bubblesort}
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG)
+{#fig:bubblesort}
 
 The Bubble sort algorithm is known to be one of the slower algorithms 
 [@www-fa18-523-63-bubble-sort]. The
@@ -138,8 +138,8 @@ end procedure
 ```
 
 ### Merge Sort
-![Merge Sort[@www-fa18-523-63-merge-sort-wiki]]
-(images/Mergesort.JPG){#fig:mergesort}
+![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG)
+{#fig:mergesort}
 
 The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
 It was originally developed by the popular mathematician and computer scientist
@@ -198,10 +198,8 @@ function merge(left, right)
 
 
 ### Insertion Sort 
-![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]]
-(images/Insertion_beginning.JPG){#fig:insertionsortbeg}
-![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]]
-(images/Insertion_intermediate.JPG){#fig:insertionsortint}
+![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_beginning.JPG){#fig:insertionsortbeg}
+![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_intermediate.JPG){#fig:insertionsortint}
 
 The insertion sort, while far more efficient than the Bubble sort, is\
  inefficient for large lists, because it builds the final sorted list one 
@@ -224,10 +222,8 @@ end while
 ```
 
 ### Shell Sort
-![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]]
-(images/Shell_Beginning.JPG){#fig:shellsortbeg}
-![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]]
-(images/Shell_intermediate.JPG){#fig:shellsortint}
+![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]](images/Shell_Beginning.JPG){#fig:shellsortbeg}
+![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]](images/Shell_intermediate.JPG){#fig:shellsortint}
 
 The Shell sort is essentially a combination of the Bubble sort and the Insertion
 sort, in that it uses both exchanges and insertions 
@@ -266,8 +262,7 @@ foreach (gap in gaps)
 ```
 
 ### Selection Sort
-![Selection Sort[@www-fa18-523-63-selection-wiki]]
-(images/SelectionSort.JPG){#fig:selectionsortbeg}
+![Selection Sort[@www-fa18-523-63-selection-wiki]](images/SelectionSort.JPG){#fig:selectionsortbeg}
 
 
 The Selection sort is not efficient for large data sets because of its time
@@ -314,6 +309,10 @@ end;
 ```
 
 ### Strand Sort
+The Strand sort alorithm is a method that uses logic to determine if sublists
+have elements greater than other lists and slowly appends greater elements
+to other lists as the algorithm iterates through datasets
+ [@www-fa18-523-63-strand-code]. 
 
 Pseudocode [@www-fa18-523-63-strand-wiki]:
 ```
@@ -541,6 +540,9 @@ sort algorithm appears to perform well for intermediate data sets but as the
 data gets larger, on either end, it loses its efficiency, at least as it is 
 implemented in this project.
 
+**The altogether run-time for this program, on my computer is approximately
+twenty minutes.**
+
 ## Conclusion
 
 As data gets larger, certain sorting algorithms, such as the Strand sort
@@ -567,3 +569,11 @@ Plenty of research, all which is cited here in references.bib, was used in this
 analysis of different sorting algorithms. Credit goes to each author of all 
 articles and web pages listed for their brilliance and efforts in furthering
 the world of data science, computer science, and software development. 
+
+###Code Acknowledgements:
+* [@www-fa18-523-63-strand-code]
+* [@www-fa18-523-63-insertion-code]
+* [@www-fa18-523-63-shell-code]
+* [@www-fa18-523-63-heap-code]
+* [@www-fa18-523-63-merge-code]
+* [@www-fa18-523-63-selection-code]
