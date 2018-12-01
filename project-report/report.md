@@ -289,7 +289,7 @@ begin
     max := length(A)-1;
 
     { The first iteration is written to look very similar to the subsequent 
-    	ones, but
+        ones, but
       without swaps. }
     nextValue := A[max];
     for i := max - 1 downto 0 do
@@ -369,9 +369,9 @@ procedure heapsort(a, count) is
     heapify(a, count)
 
     (The following loop maintains the invariants that a[0:end] is a heap and 
-    	every element
+        every element
      beyond end is greater than everything before it (so a[end:count] is in 
-     	sorted order))
+        sorted order))
     end ← count - 1
     while end > 0 do
         (a[0] is the root and largest value. The swap moves it in front of the
@@ -422,7 +422,7 @@ procedure siftDown(a, start, end) is
         else
             swap(a[root], a[swap])
             root ← swap            (repeat to continue sifting down the child 
-            	now)
+                now)
 ```
 
 ## Architecture
@@ -524,16 +524,41 @@ algorithms (Bubble and Select).
 
 ![Chart By Size](images/ChartByDataSize.JPG){#fig:chartbytest}
 
+As seen in the figure above, Among the fize fastest algorithms that were
+tested, Python's Timsort algorithm out-performs each other algorithm. 
+The Merge sort and Heap sort algorithms are outperformed until that data gets
+larger, during which the Strand sort algorithm loses its efficiency that it
+had on the smaller data sets. 
+
 ![Normalized Percentages](images/NormalizedPercentagesPerTrial.JPG)
 {#fig:chartbymethod}
 
+In this set of graphs, a downward trend of the data indicates that the algorithm
+outperforms the other algorithms as the datasets get larger.
+As the data sets get larger, Python's Timsort algorithm, and the Shell sort
+algorithm decrease its time taken, relative to the other algorithms. The Strand
+sort algorithm appears to perform well for intermediate data sets but as the 
+data gets larger, on either end, it loses its efficiency, at least as it is 
+implemented in this project.
+
 ## Conclusion
 
-As data gets larger, certain sorting algorithms become nearly unfunctional, due
+As data gets larger, certain sorting algorithms, such as the Strand sort
+ algorithm, become nearly unfunctional, due
  to time and operational complexity of the algorithm. In this case, the old
   saying of "the simpler, the better" does not seem to apply. Python's inherent
    sorting algorithm, *Timsort*, outperforms all of the other algorithms that
-    were tested, with some minor excpetions on smaller datasets. 
+    were tested. The
+Shell sort algorithm is a close second. The Bubble and Select algorithms are
+very computationally inefficient and should not be implemented unless there are
+very specific circumstances, which are not addressed in this project. The Select
+and Bubble sort algorithms tend to be what humans use, but they are not
+computationally sufficient for computer resources to use to sort big data.
+
+One metric that could be used to determine the effectiveness of an algorithm
+could be to see how that algorithm performs as the datasets get larger. This
+shows that it can handle the growing needs of big data better than other
+algorithms, like Python's Timsort and the Shell sorting algorithms showed.
 
 **Will include graphs, and all results, barring completion of code.**
 
@@ -541,4 +566,4 @@ As data gets larger, certain sorting algorithms become nearly unfunctional, due
 Plenty of research, all which is cited here in references.bib, was used in this
 analysis of different sorting algorithms. Credit goes to each author of all 
 articles and web pages listed for their brilliance and efforts in furthering
-the world of data science, computer science, and 
+the world of data science, computer science, and software development. 
