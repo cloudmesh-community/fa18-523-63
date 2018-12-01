@@ -524,8 +524,8 @@ algorithms (Bubble and Select).
 
 ![Chart By Size](images/ChartByDataSize.JPG){#fig:chartbytest}
 
-![Normalized Percentages]
-(images/NormalizedPercentagesPerTrial.JPG){#fig:chartbymethod}
+![Normalized Percentages](images/NormalizedPercentagesPerTrial.JPG)
+{#fig:chartbymethod}
 
 ## Conclusion
 
