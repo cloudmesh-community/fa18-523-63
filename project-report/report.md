@@ -4,16 +4,14 @@
 | mgm3@indiana.edu 
 | Indiana University 
 | hid: fa18-523-63 
-| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63
-/edit/master/project-report/report.md) 
-| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63
-/tree/master/project-code)
+| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/project-report/report.md) 
+| code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
 
-
+---
 
 Keywords: Sorting Algorithms, Python, Big Data Sorting, Computational Efficiency
 
-
+---
 
 ## Abstract
 
