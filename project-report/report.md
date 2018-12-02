@@ -4,7 +4,7 @@
 | mgm3@indiana.edu 
 | Indiana University 
 | hid: fa18-523-63 
-| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/project-report/report.md) 
+| github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/blob/master/project-report/report.md) 
 | code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
 
 ---
