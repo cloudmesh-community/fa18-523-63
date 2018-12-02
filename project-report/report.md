@@ -7,6 +7,10 @@
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/blob/master/project-report/report.md) 
 | code: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/tree/master/project-code)
 
+:o: fix format errors
+
+:o: comment: sorting is a very complex task, although the algorithsma re relatively straight forward. For example the papers that you selected based on the basic algorithsm do not actually show you the best sorting algorithms, whic depend on lots of hardware related issues surrondings core amnagement, bandwidth, and page and cache sizes. All of which should be dynamically discoverable, but actually are not as its in the cloud. this it makes it hard to develop a good sorting algorithm.
+
 ---
 
 Keywords: Sorting Algorithms, Python, Big Data Sorting, Computational Efficiency
