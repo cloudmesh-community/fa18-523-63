@@ -12,6 +12,8 @@
 
 :o: refernces missing, the entire use case section is unsubstantiated.
 
+:o: you picked this topic
+
 ---
 
 Keywords: HID fa18-523-63, Scikit Learn, Machine Learning Methods, Python, Artificial Intelligence
