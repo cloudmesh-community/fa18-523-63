@@ -6,6 +6,12 @@
 | hid:fa18-523-63
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/paper/paper.md)
 
+:o: uses I
+
+:o: does not explain how the selection of some of them is done
+
+:o: refernces missing, the entire use case section is unsubstantiated.
+
 ---
 
 Keywords: HID fa18-523-63, Scikit Learn, Machine Learning Methods, Python, Artificial Intelligence
