@@ -9,9 +9,9 @@
 
 :o: fix format errors
 
-:o: comment: sorting is a very complex task, although the algorithsma re relatively straight forward. For example the papers that you selected based on the basic algorithsm do not actually show you the best sorting algorithms, whic depend on lots of hardware related issues surrondings core amnagement, bandwidth, and page and cache sizes. All of which should be dynamically discoverable, but actually are not as its in the cloud. this it makes it hard to develop a good sorting algorithm.
+:o: comment: sorting is a very complex task, although the algorithsma are relatively straight forward. For example the papers that you selected based on the basic algorithsm do not actually show you the best sorting algorithms, which depend on lots of hardware related issues surronding core management, bandwidth, and page and cache sizes. All of which should be dynamically discoverable, but actually are not as its in the cloud. This it makes it hard to develop a good sorting algorithm for big data.
 
-:o: whay are you not running python 3.7
+:o: why are you not running python 3.7
 
 ---
 
