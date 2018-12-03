@@ -48,6 +48,8 @@ There is a common problem, as defined by *Pointless Programming*
 > Question: What’s the smallest number of drops required in the WORST case to 
 > determine the minimal floor." [@www-fa18-523-63-two-light-bulbs]
 
+:o: punctuation error
+
 Assuming that no damage is done to the light bulb after prelimary drops, 
 one method to this approach is to start at the bottom floor and increment the
 floor until the light bulb breaks. This way, the answer is obtained with just
@@ -92,6 +94,8 @@ them. Big data often needed to be sorted, which causes problems for many
 Due to the random number generation of a ten-million numbers, it is recommended
 that these steps be completed on a compute system with at least 16 GB of RAM.
  Python 3.6 or higher.
+
+:o: markdown rules, not checked epub
 
 Here is a summary of the hardware and software requirements of this project:
 * 16 GB of RAM (Due to the generation of 10 million random numbers)
@@ -574,6 +578,7 @@ analysis of different sorting algorithms. Credit goes to each author of all
 articles and web pages listed for their brilliance and efforts in furthering
 the world of data science, computer science, and software development. 
 
+:o: markdown error, did not check epub
 ###Code Acknowledgements:
 * [@www-fa18-523-63-strand-code]
 * [@www-fa18-523-63-insertion-code]
