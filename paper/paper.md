@@ -6,7 +6,7 @@
 | hid:fa18-523-63
 | github: [:cloud:](https://github.com/cloudmesh-community/fa18-523-63/edit/master/paper/paper.md)
 
-:o: uses I, this is not an experience report, this is supposed to be a paper
+:o: uses I, this is not an experience report, or blog, this is supposed to be a paper
 
 :o: does not explain how the selection of some of them is done
 
