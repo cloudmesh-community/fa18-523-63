@@ -1,4 +1,5 @@
-11/30/2018-12-06-2018
+11/30/2018-12/06/2018
++ Uploaded/
 + Finalized data sorting project.
 + Coded project code
 + Added project code and report.md to this repo
