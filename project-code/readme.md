@@ -34,9 +34,9 @@ For the references to the code authors**
 
 ### Install and Setup
 The requirements' references are listed in the project report.
-* Spyder(Python3.6)
-* Python3.6
-* Python3.6 Standard Library
+* Spyder(Python3.7)
+* Python3.7
+* Python3.7 Standard Library
 * Python Random
 * Python Time
 * 16 GB of RAM (Due to the generation of 10 million random numbers)
