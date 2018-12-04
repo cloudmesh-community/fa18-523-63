@@ -10,9 +10,6 @@
 :o: fix format errors
 
 :o: comment: sorting is a very complex task, although the algorithsma are relatively straight forward. For example the papers that you selected based on the basic algorithsm do not actually show you the best sorting algorithms, which depend on lots of hardware related issues surronding core management, bandwidth, and page and cache sizes. All of which should be dynamically discoverable, but actually are not as its in the cloud. This it makes it hard to develop a good sorting algorithm for big data.
-
-:o: why are you not running python 3.7
-
 ---
 
 Keywords: Sorting Algorithms, Python, Big Data Sorting, Computational Efficiency
@@ -46,9 +43,7 @@ There is a common problem, as defined by *Pointless Programming*
 > minimal floor such that if you drop the light bulb from that floor it breaks.
 > Once you break a bulb, it can’t be reused.
 > Question: What’s the smallest number of drops required in the WORST case to 
-> determine the minimal floor." [@www-fa18-523-63-two-light-bulbs]
-
-:o: punctuation error
+> determine the minimal floor" [@www-fa18-523-63-two-light-bulbs].
 
 Assuming that no damage is done to the light bulb after prelimary drops, 
 one method to this approach is to start at the bottom floor and increment the
@@ -93,14 +88,12 @@ them. Big data often needed to be sorted, which causes problems for many
 
 Due to the random number generation of a ten-million numbers, it is recommended
 that these steps be completed on a compute system with at least 16 GB of RAM.
- Python 3.6 or higher.
-
-:o: markdown rules, not checked epub
+ Python 3.7 or higher.
 
 Here is a summary of the hardware and software requirements of this project:
 * 16 GB of RAM (Due to the generation of 10 million random numbers)
 * Intel(R) Core(TM) i5-4690K CPU  @ 3.50GHz (This level of CPU is sufficient)
-* Python 3.6 [@www-fa18-523-63-python-36] or higher (Performed using the Spyder
+* Python 3.7 [@www-fa18-523-63-python-37] or higher (Performed using the Spyder
  IDE [@www-fa18-523-63-spyder])
 * Package Inclusion:
   * Python Random [@www-fa18-523-63-python-random]
@@ -433,19 +426,19 @@ procedure siftDown(a, start, end) is
 ## Architecture
 The architecture for this project is a main.py file which is the master python
 file, calling the other functions from other files, stored in the same
-directory. The other files will each be a Python 3.6
- [@www-fa18-523-63-python-36] implementation, generally performed in a rather
+directory. The other files will each be a Python 3.7
+ [@www-fa18-523-63-python-37] implementation, generally performed in a rather
 procedural programming methodology. The following files are called from 
 main.py in the working directory:
-* bubble.py
-* merge.py
-* insertion.py
-* shell.py
-* selection.py
-* squareroot.py
-* strand.py
-* pysort.py
-* heap.py
++ bubble.py
++ merge.py
++ insertion.py
++ shell.py
++ selection.py
++ squareroot.py
++ strand.py
++ pysort.py
++ heap.py
 
 In the call of the each of the above files, in main.py there is a a timing
 mechanism, using Python's *Time* library [@www-fa18-523-63-python-time]. 
@@ -461,7 +454,7 @@ program's run-time and will not be committed to disk, unless memory is usurped
 
 ## Implementation
 The implementation is performed using the Spyder terminal and running the 
-Python 3.6 script via Spyder's command line interface (CLI). Provided that all
+Python 3.7 script via Spyder's command line interface (CLI). Provided that all
 of the files are stored in a single directory, the files as listed in the code
 folder for this project should run flawlessly, with the correct Python version
  and with all of the hardware and software requirements met.
@@ -476,7 +469,10 @@ environments use. The purpose of this project is more about showing the
 efficiencies gained than it is about the cloud computing advantage.
 In practice, cloud topologies use sophisticated tuning of many algorithms,
 depending on the resources available in the computing stack
-[@www-fa18-523-63-cloud-sorting].
+[@www-fa18-523-63-cloud-sorting]. While this project does not show how
+the algorithms are used together for ultimate efficiency, it does show
+how certain efficiencies are gained from very large data sets by 
+implementing more efficient algorithms.
 
 ## Benchmark
 Many different sizes of lists of random numbers were tested. In some cases,
@@ -571,12 +567,12 @@ very specific circumstances, which are not addressed in this project. The Select
 and Bubble sort algorithms tend to be what humans use, but they are not
 computationally sufficient for computer resources to use to sort big data.
 
+While this project was hampered by the use of a single CPU core the impacts
+that ineffective sorting algorithms can drastically be felt on cloud systems.
 One metric that could be used to determine the effectiveness of an algorithm
 could be to see how that algorithm performs as the datasets get larger. This
 shows that it can handle the growing needs of big data better than other
 algorithms, like Python's Timsort and the Shell sorting algorithms showed.
-
-**Will include graphs, and all results, barring completion of code.**
 
 ## Acknowledgements
 Plenty of research, all which is cited here in references.bib, was used in this
@@ -584,11 +580,10 @@ analysis of different sorting algorithms. Credit goes to each author of all
 articles and web pages listed for their brilliance and efforts in furthering
 the world of data science, computer science, and software development. 
 
-:o: markdown error, did not check epub
 ###Code Acknowledgements:
-* [@www-fa18-523-63-strand-code]
-* [@www-fa18-523-63-insertion-code]
-* [@www-fa18-523-63-shell-code]
-* [@www-fa18-523-63-heap-code]
-* [@www-fa18-523-63-merge-code]
-* [@www-fa18-523-63-selection-code]
++ [@www-fa18-523-63-strand-code]
++ [@www-fa18-523-63-insertion-code]
++ [@www-fa18-523-63-shell-code]
++ [@www-fa18-523-63-heap-code]
++ [@www-fa18-523-63-merge-code]
++ [@www-fa18-523-63-selection-code]
