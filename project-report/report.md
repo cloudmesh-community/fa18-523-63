@@ -114,8 +114,7 @@ that are used along with `pseudocode` of the algorithms.
 
 ### Bubble Sort
 
-![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG)
-{#fig:bubblesort}
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG){#fig:bubblesort}
 
 The Bubble sort algorithm is known to be one of the slower algorithms 
 [@www-fa18-523-63-bubble-sort]. The
@@ -146,8 +145,7 @@ end procedure
 ```
 
 ### Merge Sort
-![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG)
-{#fig:mergesort}
+![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG){#fig:mergesort}
 
 The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
 It was originally developed by the popular mathematician and computer scientist
@@ -471,6 +469,14 @@ folder for this project should run flawlessly, with the correct Python version
  ease of programming.
  
  ![Design Doc](images/DesignDoc2.JPG){#fig:designdoc}
+ 
+## Limitations
+Admittedly, this project's computing power is significantly less than cloud
+environments use. The purpose of this project is more about showing the 
+efficiencies gained than it is about the cloud computing advantage.
+In practice, cloud topologies use sophisticated tuning of many algorithms,
+depending on the resources available in the computing stack
+[@www-fa18-523-63-cloud-sorting].
 
 ## Benchmark
 Many different sizes of lists of random numbers were tested. In some cases,
