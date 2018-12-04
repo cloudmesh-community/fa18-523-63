@@ -104,7 +104,7 @@ that are used along with `pseudocode` of the algorithms.
 
 ### Bubble Sort
 
-![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/bubble_sort.JPG){#fig:bubblesort}
+![Bubble Sort[@www-fa18-523-63-bubble-wiki]](images/FA18-523-63-bubble_sort.JPG){#fig:bubblesort}
 
 The Bubble sort algorithm is known to be one of the slower algorithms 
 [@www-fa18-523-63-bubble-sort]. The
@@ -135,7 +135,7 @@ end procedure
 ```
 
 ### Merge Sort
-![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/Mergesort.JPG){#fig:mergesort}
+![Merge Sort[@www-fa18-523-63-merge-sort-wiki]](images/FA18-523-63-Mergesort.JPG){#fig:mergesort}
 
 The Merge sort algorithm is a vast improvement on the bubble sort algorithm.
 It was originally developed by the popular mathematician and computer scientist
@@ -194,8 +194,8 @@ function merge(left, right)
 
 
 ### Insertion Sort 
-![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_beginning.JPG){#fig:insertionsortbeg}
-![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]](images/Insertion_intermediate.JPG){#fig:insertionsortint}
+![Insertion Sort Beginning[@www-fa18-523-63-insertion-sort-wiki]](images/FA18-523-63-Insertion_beginning.JPG){#fig:insertionsortbeg}
+![Insertion Sort Intermediate[@www-fa18-523-63-insertion-sort-wiki]](images/FA18-523-63-Insertion_intermediate.JPG){#fig:insertionsortint}
 
 The insertion sort, while far more efficient than the Bubble sort, is\
  inefficient for large lists, because it builds the final sorted list one 
@@ -218,8 +218,8 @@ end while
 ```
 
 ### Shell Sort
-![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]](images/Shell_Beginning.JPG){#fig:shellsortbeg}
-![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]](images/Shell_intermediate.JPG){#fig:shellsortint}
+![Shell Sort Beginning[@www-fa18-523-63-shell-sort-wiki]](images/FA18-523-63-Shell_Beginning.JPG){#fig:shellsortbeg}
+![Shell Sort Intermediate[@www-fa18-523-63-shell-sort-wiki]](images/FA18-523-63-Shell_intermediate.JPG){#fig:shellsortint}
 
 The Shell sort is essentially a combination of the Bubble sort and the Insertion
 sort, in that it uses both exchanges and insertions 
@@ -258,7 +258,7 @@ foreach (gap in gaps)
 ```
 
 ### Selection Sort
-![Selection Sort[@www-fa18-523-63-selection-wiki]](images/SelectionSort.JPG){#fig:selectionsortbeg}
+![Selection Sort[@www-fa18-523-63-selection-wiki]](images/FA18-523-63-SelectionSort.JPG){#fig:selectionsortbeg}
 
 
 The Selection sort is not efficient for large data sets because of its time
@@ -343,7 +343,7 @@ size sorting,
 Pseudocode is intentionally not provided here.
 
 ### Heap Sort 
-![Heap Sort[@www-fa18-523-63-heap-wiki]](images/HeapSort.JPG){#fig:heapsort}
+![Heap Sort[@www-fa18-523-63-heap-wiki]](images/FA18-523-63-HeapSort.JPG){#fig:heapsort}
 
 
 Heap sort is a method that compares some values to other values by dividing
@@ -458,7 +458,7 @@ folder for this project should run flawlessly, with the correct Python version
  I purposely kept the design very simple, for ease of implementation, and
  ease of programming.
  
- ![Design Doc](images/DesignDoc2.JPG){#fig:designdoc}
+ ![Design Doc](images/FA18-523-63-DesignDoc2.JPG){#fig:designdoc}
  
 ## Limitations
 Admittedly, this project's computing power is significantly less than cloud
@@ -528,7 +528,7 @@ and the core of the CPU which was processing this information was pegged at
 To make the visualiztions more aesthetic I have excluded the two slowest
 algorithms (Bubble and Select). 
 
-![Chart By Size](images/ChartByDataSize.JPG){#fig:chartbytest}
+![Chart By Size](images/FA18-523-63-ChartByDataSize.JPG){#fig:chartbytest}
 
 As seen in the figure above, Among the fize fastest algorithms that were
 tested, Python's Timsort algorithm out-performs each other algorithm. 
@@ -536,7 +536,7 @@ The Merge sort and Heap sort algorithms are outperformed until that data gets
 larger, during which the Strand sort algorithm loses its efficiency that it
 had on the smaller data sets. 
 
-![Normalized Percentages](images/NormalizedPercentagesPerTrial.JPG)
+![Normalized Percentages](images/FA18-523-63-NormalizedPercentagesPerTrial.JPG)
 {#fig:chartbymethod}
 
 In this set of graphs, a downward trend of the data indicates that the algorithm
