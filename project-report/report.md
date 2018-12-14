@@ -1,4 +1,4 @@
-# Analyzing Big Data Sorting Algorithms :hand: fa18-523-63
+# Analyzing Big Data Sorting Algorithms :wave:
 
 | Mark Miller 
 | mgm3@indiana.edu 
