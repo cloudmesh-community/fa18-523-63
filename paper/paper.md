@@ -1,4 +1,4 @@
-# Scikit-learn :wave: :exclamation: fa18-523-63
+# Scikit-learn :wave:
 
 | Mark Miller
 | mgm3@iu.edu
@@ -44,9 +44,11 @@ learning algorithm out there, but it is effective and easily
 implemented via Python.
 
 ## The supervised algorithms (some of them)
+
 The following alorithms are chosen as they are among the more common
 machine learning algorithms/methods that are implemented in today's data
 science world.
+
 + Nearest Neighbors: Nearest neighbors is a machine learning algorithm
 that makes the decision of one input variable based on training data
 (making it a supervised algorithm) that most similarly matches itself.
